@@ -157,22 +157,22 @@ copy_masks_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirname}
 
 ######################################################################################################################
 
-for file in ${output_directory}/*
-do
-  cp $file ${final_output_directory}/
-done
+#for file in ${output_directory}/*
+#do
+#  cp $file ${final_output_directory}/
+#done
 ######################################################################################################################
 
 ######################################################################################################################
 ## COPY IT TO THE SNIPR RESPECTIVE SCAN RESOURCES
-
-snipr_output_foldername="PREPROCESS_SEGM"
-file_suffixes=(  .nii.gz .nii .txt ) #sys.argv[5]
-for file_suffix in ${file_suffixes[@]}
-do
-    echo "COPYING FILES TO ${snipr_output_foldername} "
-    copyoutput_to_snipr  ${sessionID} ${scanID} "${final_output_directory}"  ${snipr_output_foldername}  ${file_suffix}
-done
+#
+#snipr_output_foldername="PREPROCESS_SEGM"
+#file_suffixes=(  .nii.gz .nii .txt ) #sys.argv[5]
+#for file_suffix in ${file_suffixes[@]}
+#do
+#    echo "COPYING FILES TO ${snipr_output_foldername} "
+#    copyoutput_to_snipr  ${sessionID} ${scanID} "${final_output_directory}"  ${snipr_output_foldername}  ${file_suffix}
+#done
 ######################################################################################################################
 
 

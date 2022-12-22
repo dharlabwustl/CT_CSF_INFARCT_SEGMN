@@ -153,7 +153,7 @@ echo working_dir::${working_dir}
 echo output_dirname::${output_dirname}
 copy_masks_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirname}
 ####################
-/software/CT_CSF_INFARCT_SEGMN/ppredict.sh ${working_dir} ${output_directory}
+/software/Stroke_CT_Segmentation/ppredict.sh ${working_dir} ${output_directory}
 
 ######################################################################################################################
 

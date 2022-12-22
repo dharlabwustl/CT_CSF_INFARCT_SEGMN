@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day1">
-      <change beforePath="$PROJECT_DIR$/download_with_session_ID.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_with_session_ID.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/downloadcodefromgithub.sh" beforeDir="false" afterPath="$PROJECT_DIR$/downloadcodefromgithub.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671741980891</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Commit day1">
+      <created>1671742309721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671742309721</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit day1">
+      <created>1671742369312</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671742369312</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

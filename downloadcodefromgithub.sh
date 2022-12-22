@@ -15,6 +15,8 @@ chmod +x /software/*.sh
 for x in  /software/Stroke_CT_Segmentation/*/* ; do chmod +x $x ; done
 for x in  /software/Stroke_CT_Segmentation/* ; do chmod +x $x ; done
 find /software/Stroke_CT_Segmentation/* -type f -exec sed -i "s/\/Stroke_CT_Segmentation/\/software\/Stroke_CT_Segmentation/g" {} \;
+find /software/Stroke_CT_Segmentation/* -type f -exec sed -i "s/python/\/root\/anaconda3\/envs\/tf\/bin\/python/g" {} \;
+
 #
 #cd /software/
 #rm -r /software/*

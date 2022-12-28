@@ -1,8 +1,8 @@
 #!/bin/bash
 SESSION_ID=${1}
-XNAT_USER=${2}
-XNAT_PASS=${3}
-XNAT_HOST=${4}
+export XNAT_USER=${2}
+export XNAT_PASS=${3}
+export XNAT_HOST=${4}
 TYPE_OF_PROGRAM=${5}
 echo ${TYPE_OF_PROGRAM}::TYPE_OF_PROGRAM
 if [[ ${TYPE_OF_PROGRAM} == 2 ]] ;

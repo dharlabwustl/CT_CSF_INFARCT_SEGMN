@@ -1,5 +1,6 @@
 #!/bin/bash
 export MCR_CACHE_ROOT=/workinginput
+export XNAT_HOST=${4}
 cd /software/
 rm -r /software/*
 git_link=${5}

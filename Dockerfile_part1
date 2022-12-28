@@ -17,7 +17,11 @@ RUN apt install -y \
   unzip  \
   curl  \
   git \
-  tree
+  tree  \
+  python3-pip
+ # software-properties-common
+#RUN apt-get update
+#RUN add-apt-repository ppa:deadsnakes/ppa -y
 RUN pip3 install \
   nibabel  \
   numpy  \

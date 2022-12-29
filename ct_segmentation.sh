@@ -168,6 +168,7 @@ echo working_dir::${working_dir}
 echo output_dirname::${output_dirname}
 copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirname}
 ####################
+/bin/bash -i -c
 conda activate tf
 /software/Stroke_CT_Segmentation/ppredict.sh ${working_dir} ${output_directory}
 

@@ -36,3 +36,5 @@ RUN pip3 install \
   scipy  \
   pypng  \
   PyGithub
+SHELL ["/bin/bash", "-i", "-c"]
+RUN conda install numpy

@@ -4,6 +4,8 @@ FROM yashengwustl/stroke_ct_segmentation:latest
 RUN apt update
 RUN mkdir -p /callfromgithub
 RUN chmod 755 /callfromgithub
+RUN chmod 777 /root/anaconda3/
+RUN chmod +x /root/anaconda3/envs/tf/bin/*
 COPY downloadcodefromgithub.sh /callfromgithub/
 RUN chmod +x /callfromgithub/downloadcodefromgithub.sh
 RUN chmod +x /Stroke_CT_Segmentation/*.sh

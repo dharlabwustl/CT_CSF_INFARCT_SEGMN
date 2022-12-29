@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os, sys, errno, shutil, uuid,subprocess,csv,json
+os.environ['OPENBLAS_NUM_THREADS'] = '1'
 import math
 import glob
 import re

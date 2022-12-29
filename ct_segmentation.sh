@@ -168,10 +168,11 @@ echo working_dir::${working_dir}
 echo output_dirname::${output_dirname}
 copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirname}
 ####################
+conda activate tf
 /software/Stroke_CT_Segmentation/ppredict.sh ${working_dir} ${output_directory}
 
 ######################################################################################################################
-
+conda deactivate
 for file in ${output_directory}/*
 do
   cp $file ${final_output_directory}/

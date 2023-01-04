@@ -1,6 +1,7 @@
 #FROM sharmaatul11/fsl502py369ltx-full:latest
 #FROM sharmaatul11/yashengstep1withfsl:latest
-FROM yashengwustl/stroke_ct_segmentation:latest
+#FROM yashengwustl/stroke_ct_segmentation:latest
+FROM sharmaatul11/ct_segmentation_yasheng:latest
 RUN apt update
 RUN mkdir -p /callfromgithub
 RUN chmod 755 /callfromgithub

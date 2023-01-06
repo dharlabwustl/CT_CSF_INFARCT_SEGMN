@@ -15,7 +15,7 @@ resource_dirname=$4 #"MASKS" #sys.argv[4]
 file_suffix=$5
 output_dir=$3
 echo " I AM IN copyoutput_to_snipr "
-python3 -c "
+/opt/conda/bin/python -c "
 import sys 
 sys.path.append('/software');
 from download_with_session_ID import *; 
@@ -32,7 +32,7 @@ scanID=${2}
 resource_dirname=${3} #str(sys.argv[4])
 output_dirname=${4}  #str(sys.argv[3])
 echo output_dirname::${output_dirname}
-python3 -c "
+/opt/conda/bin/python -c "
 import sys 
 sys.path.append('/software');
 from download_with_session_ID import *; 
@@ -48,7 +48,7 @@ scanID=${2}
 resource_dirname=${3} #str(sys.argv[4])
 output_dirname=${4}  #str(sys.argv[3])
 echo output_dirname::${output_dirname}
-python3 -c "
+/opt/conda/bin/python -c "
 import sys
 sys.path.append('/software');
 from download_with_session_ID import *;
@@ -96,7 +96,7 @@ rm -r ${working_dir}/*
 output_dir=$(dirname ${output_csvfile})
 rm -r ${output_dir}/*
 # scanID=$2
-python3 -c "
+/opt/conda/bin/python -c "
 import sys 
 sys.path.append('/software');
 from download_with_session_ID import *; 
@@ -116,7 +116,7 @@ dir_to_save=${2} #sys.argv[2]
 # rm -r ${output_dir}/*
 # sessionID=$1
 # # scanID=$2
-python3 -c "
+/opt/conda/bin/python -c "
 import sys 
 sys.path.append('/software');
 from download_with_session_ID import *; 
@@ -134,7 +134,7 @@ scanId=${2} # sys.argv[2]
 resource_foldername=${3} # sys.argv[3]
 dir_to_save=${4} # sys.argv[4]
 csvfilename=${5} # sys.argv[5]
-python3 -c "
+/opt/conda/bin/python -c "
 import sys 
 sys.path.append('/software');
 from download_with_session_ID import *; 

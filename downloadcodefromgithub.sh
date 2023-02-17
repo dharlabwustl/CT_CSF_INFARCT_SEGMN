@@ -18,7 +18,21 @@ for x in  /software/Stroke_CT_Segmentation/* ; do chmod +x $x ; done
 find /software/Stroke_CT_Segmentation/* -type f -exec sed -i "s/\/Stroke_CT_Segmentation/\/software\/Stroke_CT_Segmentation/g" {} \;
 find /software/Stroke_CT_Segmentation/* -type f -exec sed -i "s/python/\/opt\/conda\/envs\/tf\/bin\/python/g" {} \;
 #find /software/Stroke_CT_Segmentation/* -type f -exec sed -i "s/python/\/root\/anaconda3\/envs\/tf\/bin\/python/g" {} \;
+##############################YASHENG'S HEMORRHAGE SEGMENTATION CODE ##################################################
+git_link_yasheng='https://github.com/yasheng-chen/unet_ich_edema.git'
+git clone ${git_link_yasheng}
+y1=${git_link_yasheng%.git}
+git_dir1=$(basename $y1)
+chmod +x /software/unet_ich_edema/*.sh
+chmod +x /software/unet_ich_edema/*.sh
+for x in  /software/unet_ich_edema/*/* ; do chmod +x $x ; done
+for x in  /software/unet_ich_edema/* ; do chmod +x $x ; done
+find /software/unet_ich_edema/* -type f -exec sed -i "s/\/Stroke_CT_Segmentation/\/software\/Stroke_CT_Segmentation/g" {} \;
+find /software/unet_ich_edema/* -type f -exec sed -i "s/python/\/opt\/conda\/envs\/tf\/bin\/python/g" {} \;
 
+#find /software/${git_dir}/* -type f -exec sed -i "s/python/\/root\/anaconda3\/envs\/tf\/bin\/python'/g" {} \;
+#find /software/${git_dir}/* -type f -exec sed -i "s/python/\/root\/anaconda3\/envs\/tf\/bin\/python'/g" {} \;
+#mv ${git_dir1}/* /software/
 #/opt/conda/envs/tf/bin/python
 #cd /software/
 #rm -r /software/*

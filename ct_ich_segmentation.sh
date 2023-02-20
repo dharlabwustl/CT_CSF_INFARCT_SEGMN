@@ -176,12 +176,14 @@ copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirnam
 #/root/anaconda3/bin/conda deactivate
 for file in /software/unet_ich_edema/Results_model_114/*.nii*
 do
-  cp $file ${final_output_directory}/
+  new_filename=${file%.nii.gz_class1*}_class1.nii.gz
+  cp new_filename ${final_output_directory}/
 done
 
 for file in /software/unet_ich_edema/Results_model_72/*.nii*
 do
-  cp $file ${final_output_directory}/
+  new_filename=${file%.nii.gz_class1*}_class2.nii.gz
+  cp new_filename ${final_output_directory}/
 done
 ######################################################################################################################
 

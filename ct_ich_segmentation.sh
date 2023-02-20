@@ -170,7 +170,7 @@ copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirnam
 ####################
 #/bin/bash -i -c
 #/root/anaconda3/bin/conda activate tf
-#/software/unet_ich_edema/ppredict.sh ${output_dirname}
+/software/unet_ich_edema/ppredict.sh ${output_dirname}
 
 ######################################################################################################################
 ##/root/anaconda3/bin/conda deactivate
@@ -180,22 +180,22 @@ copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirnam
 
 for file in /software/unet_ich_edema/Results_model_114/*.nii*
 do
-  if [[ "${file}" != *"ERICH"* ]]; then
-    echo "It's there."
+#  if [[ "${file}" != *"ERICH"* ]]; then
+#    echo "It's there."
       new_filename=${file%.nii.gz_class1*}_class1.nii.gz
       cp ${new_filename} ${final_output_directory}/
-  fi
+#  fi
 
 
 done
 
 for file in /software/unet_ich_edema/Results_model_72/*.nii*
 do
-    if [[ "${file}" != *"ERICH"* ]]; then
-      echo "It's there."
+#    if [[ "${file}" != *"ERICH"* ]]; then
+#      echo "It's there."
   new_filename=${file%.nii.gz_class2*}_class2.nii.gz
   cp ${new_filename} ${final_output_directory}/
-  fi
+#  fi
 done
 ######################################################################################################################
 

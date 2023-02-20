@@ -26,9 +26,9 @@ git_dir1=$(basename $y1)
 cp /software/ich_IO.py ${git_dir1}/IO.py
 cp /software/ich_ppredict.sh ${git_dir1}/ppredict.sh
 chmod +x /software/unet_ich_edema/*.sh
-chmod +x /software/unet_ich_edema/*.sh
+#chmod +x /software/unet_ich_edema/*.sh
 for x in  /software/unet_ich_edema/*/* ; do chmod +x $x ; done
-for x in  /software/unet_ich_edema/* ; do chmod +x $x ; done
+#for x in  /software/unet_ich_edema/* ; do chmod +x $x ; done
 #find /software/unet_ich_edema/* -type f -exec sed -i "s/\/Stroke_CT_Segmentation/\/software\/Stroke_CT_Segmentation/g" {} \;
 find /software/unet_ich_edema/* -type f -exec sed -i "s/python/\/opt\/conda\/envs\/tf\/bin\/python/g" {} \;
 

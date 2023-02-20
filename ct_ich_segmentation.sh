@@ -174,7 +174,7 @@ copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirnam
 
 ######################################################################################################################
 #/root/anaconda3/bin/conda deactivate
-for file in ${output_directory}/*
+for file in /software/unet_ich_edema/*
 do
   cp $file ${final_output_directory}/
 done

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10">
-      <change afterPath="$PROJECT_DIR$/ct_ich_segmentation.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/downloadcodefromgithub.sh" beforeDir="false" afterPath="$PROJECT_DIR$/downloadcodefromgithub.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ct_ich_segmentation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ct_ich_segmentation.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676659961891</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Commit day10">
+      <created>1676662561962</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1676662561962</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -178,6 +178,11 @@ for file in /software/unet_ich_edema/Results_model_114/*.nii*
 do
   cp $file ${final_output_directory}/
 done
+
+for file in /software/unet_ich_edema/Results_model_72/*.nii*
+do
+  cp $file ${final_output_directory}/
+done
 ######################################################################################################################
 
 ######################################################################################################################

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10">
-      <change beforePath="$PROJECT_DIR$/ct_ich_segmentation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ct_ich_segmentation.sh" afterDir="false" />
-    </list>
+    <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676909505167</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Commit day10">
+      <created>1676909674353</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1676909674353</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

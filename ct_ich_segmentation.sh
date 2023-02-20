@@ -182,7 +182,7 @@ done
 
 for file in /software/unet_ich_edema/Results_model_72/*.nii*
 do
-  new_filename=${file%.nii.gz_class1*}_class2.nii.gz
+  new_filename=${file%.nii.gz_class2*}_class2.nii.gz
   cp new_filename ${final_output_directory}/
 done
 ######################################################################################################################

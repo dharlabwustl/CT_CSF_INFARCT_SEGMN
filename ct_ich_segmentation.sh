@@ -170,7 +170,7 @@ copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirnam
 ####################
 #/bin/bash -i -c
 #/root/anaconda3/bin/conda activate tf
-/software/unet_ich_edema/ppredict.sh ${output_directory}
+/software/unet_ich_edema/ppredict.sh ${output_dirname}
 
 ######################################################################################################################
 #/root/anaconda3/bin/conda deactivate

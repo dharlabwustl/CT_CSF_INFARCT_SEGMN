@@ -190,7 +190,7 @@ done
 ######################################################################################################################
 # COPY IT TO THE SNIPR RESPECTIVE SCAN RESOURCES
 
-snipr_output_foldername="PREPROCESS_HEM_SEGM"
+snipr_output_foldername="MASKS"
 file_suffixes=(  .nii.gz .nii .txt ) #sys.argv[5]
 for file_suffix in ${file_suffixes[@]}
 do

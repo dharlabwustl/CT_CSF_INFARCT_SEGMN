@@ -177,6 +177,12 @@ copy_allfiles_data   ${sessionID}  ${scanID} ${resource_dirname} ${output_dirnam
 #if [[ "$STR" == *"$SUB"* ]]; then
 #  echo "It's there."
 #fi
+for file in ${output_dirname}/*levelset*.nii.gz
+do
+
+      cp ${file} ${final_output_directory}/
+
+done
 
 for file in /software/unet_ich_edema/Results_model_114/*.nii*
 do

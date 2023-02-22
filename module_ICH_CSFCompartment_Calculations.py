@@ -902,13 +902,13 @@ def measure_compartments_with_reg_round5_one_file_sh_v1() : #niftifilenamedir,np
 
 
 
-# def overlay_mask_gray(grayct_mat,maskct_mat,color_intensity=[0,0,255],filenametosave='test.png'):
-#     slice_3_layer= np.zeros([grayct_mat.shape[0],grayct_mat.shape[1],3])
-#     slice_3_layer[:,:,0]= grayct_mat #imgray1
-#     slice_3_layer[:,:,1]= grayct_mat #imgray1
-#     slice_3_layer[:,:,2]= grayct_mat# imgray1
-#     # if layer_number==2:
-#     slice_3_layer[:,:,0][maskct_mat>0]=color_intensity[0]
-#     slice_3_layer[:,:,1][maskct_mat>0]=color_intensity[1]
-#     slice_3_layer[:,:,2][maskct_mat>0]=color_intensity[2]
-#     cv2.imwrite(filenametosave,cv2.flip(slice_3_layer,0))
+def overlay_mask_gray(grayct_mat,maskct_mat,color_intensity=[0,0,255],filenametosave='test.png'):
+    slice_3_layer= np.zeros([grayct_mat.shape[0],grayct_mat.shape[1],3])
+    slice_3_layer[:,:,0]= grayct_mat #imgray1
+    slice_3_layer[:,:,1]= grayct_mat #imgray1
+    slice_3_layer[:,:,2]= grayct_mat# imgray1
+    # if layer_number==2:
+    slice_3_layer[:,:,0][maskct_mat>0]=color_intensity[0]
+    slice_3_layer[:,:,1][maskct_mat>0]=color_intensity[1]
+    slice_3_layer[:,:,2][maskct_mat>0]=color_intensity[2]
+    cv2.imwrite(filenametosave,cv2.flip(slice_3_layer,0))

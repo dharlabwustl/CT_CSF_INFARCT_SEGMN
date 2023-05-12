@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ct_segmentation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ct_segmentation.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,13 +40,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671737157702</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Commit day1">
-      <created>1671741911574</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1671741911574</updated>
     </task>
     <task id="LOCAL-00004" summary="Commit day1">
       <created>1671741980891</created>
@@ -383,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683908490497</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Commit day10">
+      <created>1683909498444</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1683909498444</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

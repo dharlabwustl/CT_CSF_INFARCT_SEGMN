@@ -704,34 +704,34 @@ def check_if_a_file_exist_in_snipr(URI, resource_dir,extension_to_find_list):
             if extension_to_find in df_scan.loc[x,'Name']:
                 num_files_present=num_files_present+1
     return num_files_present
-def call_check_if_a_file_exist_in_snipr( args):
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument('stuff', nargs='+')
-    # args = parser.parse_args()
-    # print (args.stuff)
-    sessionID=args.stuff[1]
-    scanID=args.stuff[2]
-    resource_dir=args.stuff[3]
-    URI="/data/experiments/"+sessionID+"/scans/"+scanID
-    extension_to_find_list=args.stuff[4:]
-    file_present=check_if_a_file_exist_in_snipr(URI, resource_dir,extension_to_find_list)
-    if file_present < len(extension_to_find_list):
-        return 0
-    return 1
-def main():
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument('stuff', nargs='+')
-    args = parser.parse_args()
-    name_of_the_function=args.stuff[0]
-    return_value=0
-    if name_of_the_function == "call_check_if_a_file_exist_in_snipr":
-        return_value=call_check_if_a_file_exist_in_snipr(args)
-        print(return_value)
-        return
-    print(return_value)
-if __name__ == '__main__':
-    main()
+# def call_check_if_a_file_exist_in_snipr( args):
+#     # parser = argparse.ArgumentParser()
+#     # parser.add_argument('stuff', nargs='+')
+#     # args = parser.parse_args()
+#     # print (args.stuff)
+#     sessionID=args.stuff[1]
+#     scanID=args.stuff[2]
+#     resource_dir=args.stuff[3]
+#     URI="/data/experiments/"+sessionID+"/scans/"+scanID
+#     extension_to_find_list=args.stuff[4:]
+#     file_present=check_if_a_file_exist_in_snipr(URI, resource_dir,extension_to_find_list)
+#     if file_present < len(extension_to_find_list):
+#         return 0
+#     return 1
+# def main():
+#
+#     parser = argparse.ArgumentParser()
+#     parser.add_argument('stuff', nargs='+')
+#     args = parser.parse_args()
+#     name_of_the_function=args.stuff[0]
+#     return_value=0
+#     if name_of_the_function == "call_check_if_a_file_exist_in_snipr":
+#         return_value=call_check_if_a_file_exist_in_snipr(args)
+#         print(return_value)
+#         return
+#     print(return_value)
+# if __name__ == '__main__':
+#     main()
 # def uploadfile():
 #     sessionId=str(sys.argv[1])
 #     scanId=str(sys.argv[2])

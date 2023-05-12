@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ct_segmentation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ct_segmentation.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/download_with_session_ID.py" beforeDir="false" afterPath="$PROJECT_DIR$/download_with_session_ID.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +40,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671737157702</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Commit day1">
-      <created>1672259328228</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1672259328228</updated>
     </task>
     <task id="LOCAL-00011" summary="Commit day1">
       <created>1672259481451</created>
@@ -384,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683910860810</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Commit day10">
+      <created>1683910944868</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1683910944868</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

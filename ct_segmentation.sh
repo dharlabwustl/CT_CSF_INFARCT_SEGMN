@@ -158,7 +158,7 @@ resource_foldername="PREPROCESS_SEGM"
 call_check_if_a_file_exist_in_snipr_arguments=('call_check_if_a_file_exist_in_snipr' ${sessionId}  ${scanID}  ${resource_foldername} _resaved.nii.gz  _resaved_4DL_normalized.nii.gz   _resaved_levelset.nii.gz  _resaved_4DL_seg.nii.gz  _resaved_levelset_bet.nii.gz  manual_splits.txt  _resaved_4DL_normalized.nii.gz_csf_3.nii.gz  _resaved_4DL_normalized.nii.gz_infarct.nii.gz  _resaved_4DL_normalized.nii.gz_csf_4.nii.gz  _resaved_4DL_normalized.nii.gz_csf_8.nii.gz  _resaved_4DL_normalized.nii.gz_csf_1.nii.gz   _resaved_4DL_normalized.nii.gz_csf_6.nii.gz   _resaved_4DL_normalized.nii.gz_csf_2.nii.gz   _resaved_4DL_normalized.nii.gz_csf_5.nii.gz  _resaved_4DL_normalized.nii.gz_csf_7.nii.gz  _resaved_4DL_normalized.nii.gz_csf_9.nii.gz  _resaved_4DL_normalized.nii.gz_csf_10.nii.gz  )
 outputfiles_present=$(python3 download_with_session_ID.py "${call_check_if_a_file_exist_in_snipr_arguments[@]}" )
 done < <( tail -n +2 "${niftifile_csvfilename}" )
-echo ${outputfiles_present}
+echo "outputfiles_present::"${outputfiles_present}
 #################################################
 #if [[ $outputfiles_present -eq 0 ]] ; then
 #copy_scan_data ${niftifile_csvfilename} ${working_dir}

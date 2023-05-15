@@ -145,6 +145,22 @@ get_maskfile_scan_metadata()" ${sessionId}  ${scanId}  ${resource_foldername} ${
 ## GET THE SINGLE CT NIFTI FILE NAME AND COPY IT TO THE WORKING_DIR
 niftifile_csvfilename=${working_dir}/'this_session_final_ct.csv'
 get_nifti_scan_uri ${sessionID}  ${working_dir} ${niftifile_csvfilename}
+
+########################################
+outputfiles_present=0
+while IFS=',' read -ra array; do
+scanID=${array[2]}
+echo sessionId::${sessionID}
+echo scanId::${scanID}
+resource_foldername="PREPROCESS_SEGM"
+### check if the file exists:
+call_check_if_a_file_exist_in_snipr_arguments=('call_check_if_a_file_exist_in_snipr' ${sessionId}  ${scanID}  ${resource_foldername} _resaved.nii.gz _normalized.nii.gz _levelset.nii.gz _levelset_bet.nii.gz _4DL_seg.nii.gz)
+outputfiles_present=$(python3 download_with_session_ID.py "${call_check_if_a_file_exist_in_snipr_arguments[@]}" )
+done < <( tail -n +2 "${niftifile_csvfilename}" )
+################################################
+if [[ $outputfiles_present -eq 0 ]] ; then
+
+
 copy_scan_data ${niftifile_csvfilename} ${working_dir}
 working_dir=/workinginput
 output_directory=/workingoutput
@@ -191,7 +207,7 @@ do
     copyoutput_to_snipr  ${sessionID} ${scanID} "${final_output_directory}"  ${snipr_output_foldername}  ${file_suffix}
 done
 ######################################################################################################################
-
+fi
 
 
 ################################################################################################################

@@ -145,7 +145,6 @@ get_maskfile_scan_metadata()" ${sessionId}  ${scanId}  ${resource_foldername} ${
 ## GET THE SINGLE CT NIFTI FILE NAME AND COPY IT TO THE WORKING_DIR
 niftifile_csvfilename=${working_dir}/'this_session_final_ct.csv'
 get_nifti_scan_uri ${sessionID}  ${working_dir} ${niftifile_csvfilename}
-
 ########################################
 outputfiles_present=0
 while IFS=',' read -ra array; do
@@ -166,7 +165,6 @@ fi
 if [[  "${outputfiles_present: -1}" -eq 0 ]] ; then
 
 echo "outputfiles_present:: "${outputfiles_present: -1}"::outputfiles_present"
-
 copy_scan_data ${niftifile_csvfilename} ${working_dir}
 working_dir=/workinginput
 output_directory=/workingoutput
@@ -201,7 +199,11 @@ do
   cp $file ${final_output_directory}/
 done
 ######################################################################################################################
-
+echo " FILES NOT PRESENT I AM WORKING ON IT"
+else
+  echo " FILES ARE PRESENT "
+######################################################################################################################
+fi
 ######################################################################################################################
 # COPY IT TO THE SNIPR RESPECTIVE SCAN RESOURCES
 
@@ -212,11 +214,8 @@ do
     echo "COPYING FILES TO ${snipr_output_foldername} "
     copyoutput_to_snipr  ${sessionID} ${scanID} "${final_output_directory}"  ${snipr_output_foldername}  ${file_suffix}
 done
-else
-  echo " FILES ARE PRESENT "
 ######################################################################################################################
-######################################################################################################################
-fi
+
 
 
 ################################################################################################################

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10" />
+    <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,13 +39,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671737157702</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Commit day10">
-      <created>1672856508833</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1672856508833</updated>
     </task>
     <task id="LOCAL-00020" summary="Commit day10">
       <created>1672860780731</created>
@@ -381,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684174429100</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Commit day10">
+      <created>1684174648508</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1684174648508</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -718,6 +718,62 @@ def call_check_if_a_file_exist_in_snipr( args):
     if file_present < len(extension_to_find_list):
         return 0
     return 1
+def download_a_singlefile_with_URIString(url,filename,dir_to_save):
+    xnatSession = XnatSession(username=XNAT_USER, password=XNAT_PASS, host=XNAT_HOST)
+    xnatSession.renew_httpsession()
+    # command="echo  " + url['URI'] + " >> " +  os.path.join(dir_to_save,"test.csv")
+    # subprocess.call(command,shell=True)
+    response = xnatSession.httpsess.get(xnatSession.host +url) #/data/projects/ICH/resources/179772/files/ICH_CTSESSIONS_202305170753.csv") #
+    #                                                       # "/data/experiments/SNIPR02_E03548/scans/1-CT1/resources/147851/files/ICH_0001_01022017_0414_1-CT1_threshold-1024.0_22121.0TOTAL_VersionDate-11302022_04_22_2023.csv") ## url['URI'])
+    zipfilename=os.path.join(dir_to_save,filename ) #"/data/projects/ICH/resources/179772/files/ICH_CTSESSIONS_202305170753.csv")) #sessionId+scanId+'.zip'
+    with open(zipfilename, "wb") as f:
+        for chunk in response.iter_content(chunk_size=512):
+            if chunk:  # filter out keep-alive new chunks
+                f.write(chunk)
+    xnatSession.close_httpsession()
+    return zipfilename
+def listoffile_witha_URI_as_df(URI):
+    xnatSession = XnatSession(username=XNAT_USER, password=XNAT_PASS, host=XNAT_HOST)
+    xnatSession.renew_httpsession()
+    # print("I AM IN :: listoffile_witha_URI_as_df::URI::{}".format(URI))
+    response = xnatSession.httpsess.get(xnatSession.host + URI)
+    # print("I AM IN :: listoffile_witha_URI_as_df::URI::{}".format(URI))
+    num_files_present=0
+    df_scan=[]
+    if response.status_code != 200:
+        xnatSession.close_httpsession()
+        return num_files_present
+    metadata_masks=response.json()['ResultSet']['Result']
+    df_listfile = pd.read_json(json.dumps(metadata_masks))
+    xnatSession.close_httpsession()
+    return df_listfile
+def download_files_in_a_resource(URI,dir_to_save):
+    try:
+        df_listfile=listoffile_witha_URI_as_df(URI)
+        print("df_listfile::{}".format(df_listfile))
+        # download_a_singlefile_with_URLROW(df_listfile,dir_to_save)
+        for item_id, row in df_listfile.iterrows():
+            # print("row::{}".format(row))
+            # download_a_singlefile_with_URLROW(row,dir_to_save)
+            download_a_singlefile_with_URIString(row['URI'],row['Name'],dir_to_save)
+            print("DOWNLOADED ::{}".format(row))
+    except:
+        print("FAILED AT ::{}".format("download_files_in_a_resource"))
+        pass
+def call_download_files_in_a_resource_in_a_session(args):
+    sessionId=args.stuff[1]
+    # scanId=args.stuff[2]
+    resource_dirname=args.stuff[2]
+    dir_to_save=args.stuff[3]
+    URI = (("/data/experiments/%s/resources/" + resource_dirname+ "/files?format=json")  %
+           (sessionId))
+
+    try:
+        download_files_in_a_resource(URI,dir_to_save)
+        print("I AM IN :: call_download_files_in_a_resource_in_a_session::URI::{}".format(URI))
+        return 1
+    except:
+        return 0
 def main():
 
     parser = argparse.ArgumentParser()
@@ -727,6 +783,8 @@ def main():
     return_value=0
     if name_of_the_function == "call_check_if_a_file_exist_in_snipr":
         return_value=call_check_if_a_file_exist_in_snipr(args)
+    if name_of_the_function == "call_download_files_in_a_resource_in_a_session":
+        return_value=call_download_files_in_a_resource_in_a_session(args)
         # print(return_value)
         # return
     print(return_value)

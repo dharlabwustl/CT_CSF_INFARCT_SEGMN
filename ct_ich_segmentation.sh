@@ -153,6 +153,7 @@ for niftifile_csvfilename in ${working_dir}/*NIFTILOCATION.csv; do
   ################################################
   echo "outputfiles_present:: "${outputfiles_present: -1}"::outputfiles_present"
   #echo "outputfiles_present::ATUL${outputfiles_present}::outputfiles_present"
+  outputfiles_present=0000000000000000000000
   if [[ "${outputfiles_present: -1}" -eq 1 ]]; then
     echo " I AM THE ONE"
   fi

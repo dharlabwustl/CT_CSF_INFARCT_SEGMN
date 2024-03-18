@@ -10,6 +10,10 @@ if [[ ${TYPE_OF_PROGRAM} == 2 ]] ;
 then
     /software/ct_segmentation.sh $SESSION_ID $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
 fi
+if [[ ${TYPE_OF_PROGRAM} == 'CSF_INFARCT_SEGMENTATION' ]] ;
+then
+    /software/ct_segmentation_03_18_2024.sh $SESSION_ID $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
+fi
 
 if [[ ${TYPE_OF_PROGRAM} == 3 ]] ;
 then

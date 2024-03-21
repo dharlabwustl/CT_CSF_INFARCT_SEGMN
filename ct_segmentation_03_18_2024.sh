@@ -156,7 +156,7 @@ for niftifile_csvfilename in ${working_dir}/*NIFTILOCATION.csv; do
   if [[ "${outputfiles_present: -1}" -eq 1 ]]; then
     echo " I AM THE ONE"
   fi
-  if [[ "${outputfiles_present: -1}" -eq 1 ]]; then
+  if [[ "${outputfiles_present: -1}" -eq 0 ]]; then
 
     echo "outputfiles_present:: "${outputfiles_present: -1}"::outputfiles_present"
     copy_scan_data ${niftifile_csvfilename} ${working_dir}
@@ -184,7 +184,7 @@ for niftifile_csvfilename in ${working_dir}/*NIFTILOCATION.csv; do
     ####################
     #/bin/bash -i -c
     #/root/anaconda3/bin/conda activate tf
-#    /software/Stroke_CT_Segmentation/ppredict.sh ${working_dir} ${output_directory}
+    /software/Stroke_CT_Segmentation/ppredict.sh ${working_dir} ${output_directory}
 
     ######################################################################################################################
     #/root/anaconda3/bin/conda deactivate

@@ -832,8 +832,8 @@ def download_an_xmlfile_with_URIString(args): #url,filename,dir_to_save):
         print("I PASSED AT ::{}".format(inspect.stack()[0][3]))
     return returnvalue
 def fill_redcap_for_selected_scan(args):
-    subprocess.call("echo " + "I zai zeli AT ::{}  >> /workingoutput/error.txt".format(args.stuff[1]) ,shell=True )
-    subprocess.call("echo " + "I zai zeli AT ::{}  >> /workingoutput/error.txt".format(args.stuff[2]) ,shell=True )
+    subprocess.call("echo " + "I zai fill_redcap_for_selected_scan AT ::{}  >> /workingoutput/error.txt".format(args.stuff[1]) ,shell=True )
+    subprocess.call("echo " + "I zai fill_redcap_for_selected_scan AT ::{}  >> /workingoutput/error.txt".format(args.stuff[2]) ,shell=True )
     try:
 
 # session_id=args.stuff[1]

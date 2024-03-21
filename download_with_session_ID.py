@@ -987,6 +987,8 @@ def main():
         return_value=call_download_files_in_a_resource_in_a_session(args)
         # print(return_value)
         # return
+    if "call" not in name_of_the_function:
+        globals()[args.stuff[0]](args)
     print(return_value)
 if __name__ == '__main__':
     main()

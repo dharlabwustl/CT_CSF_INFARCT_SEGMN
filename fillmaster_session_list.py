@@ -3725,6 +3725,36 @@ def csvfile_preprocessing_for_redcap(args):
     except:
         subprocess.call("echo " + "I FAILED AT ::{}  >> /workingoutput/error.txt".format(inspect.stack()[0][3]) ,shell=True )
     return
+def csvfile_segmn_for_redcap(args):
+    preprocessing_filename_csv=args.stuff[1]
+    csvoutputfilename=args.stuff[2]
+    # session_id=args.stuff[3]
+    subprocess.call("echo " + "I PASSED AT ::{}  >> /workingoutput/error.txt".format(preprocessing_filename_csv) ,shell=True )
+    subprocess.call("echo " + "I PASSED AT ::{}  >> /workingoutput/error.txt".format(csvoutputfilename) ,shell=True )
+    try:
+        # x=1
+        preprocessing_filename_csv=args.stuff[1]
+        csvoutputfilename=args.stuff[2]
+
+        subprocess.call("echo " + "I PASSED AT ::{}  >> /workingoutput/error.txt".format(preprocessing_filename_csv) ,shell=True )
+        subprocess.call("echo " + "I PASSED AT ::{}  >> /workingoutput/error.txt".format(csvoutputfilename) ,shell=True )
+        preprocessing_filename_csv_df=pd.read_csv(preprocessing_filename_csv)
+        all_files_present=preprocessing_filename_csv_df.at[0,'all_files_present_flag']
+
+        pre_processing_complete=1 #0
+
+        pre_processing_complete=1
+
+        row_values=[all_files_present,pre_processing_complete] #body_site,scan_date_time,scan_selected,scan_stem,scan_name,scan_kernel,kvp,scanner_name,px,pz,slices,scan_selection_complete]
+        columnames=['csf_inf_seg_files_present','csf_infarct_seg_complete'] #,'scan_selected','scan_stem','scan_name','scan_kernel','kvp','scanner_name','px','pz','slices','scan_selection_complete']
+        outputdf=pd.DataFrame(row_values).transpose()
+        outputdf.columns=columnames
+        outputdf.to_csv(csvoutputfilename,index=False)
+        subprocess.call("echo " + "I PASSED AT ::{}  >> /workingoutput/error.txt".format(inspect.stack()[0][3]) ,shell=True )
+    except:
+        subprocess.call("echo " + "I FAILED AT ::{}  >> /workingoutput/error.txt".format(inspect.stack()[0][3]) ,shell=True )
+    return
+
 
 def main():
     parser = argparse.ArgumentParser()

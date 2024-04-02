@@ -705,6 +705,7 @@ def check_if_a_file_exist_in_snipr(URI, resource_dir,extension_to_find_list):
             if extension_to_find in df_scan.loc[x,'Name']:
                 subprocess.call("echo " + "I FILENAME AT ::{}  >> /workingoutput/error.txt".format(df_scan.loc[x,'URI']) ,shell=True )
                 num_files_present=num_files_present+1
+
     return num_files_present
 def call_check_if_a_file_exist_in_snipr( args):
     # parser = argparse.ArgumentParser()
@@ -719,12 +720,16 @@ def call_check_if_a_file_exist_in_snipr( args):
     file_present=check_if_a_file_exist_in_snipr(URI, resource_dir,extension_to_find_list)
     all_files_present_flag=0
     if file_present < len(extension_to_find_list):
+        subprocess.call("echo " + "I len(extension_to_find_list) AT ::{}  >> /workingoutput/error.txt".format(len(extension_to_find_list)) ,shell=True )
+        subprocess.call("echo " + "I file_present AT ::{}  >> /workingoutput/error.txt".format(file_present) ,shell=True )
         return 0
     else:
         all_files_present_flag=1
     all_files_present_flag_df=pd.DataFrame([all_files_present_flag])
     all_files_present_flag_df.columns=['all_files_present_flag']
     all_files_present_flag_df.to_csv('/workinginput/all_files_present_flag_df.csv',index=False)
+    subprocess.call("echo " + "I len(extension_to_find_list) AT ::{}  >> /workingoutput/error.txt".format(len(extension_to_find_list)) ,shell=True )
+    subprocess.call("echo " + "I file_present AT ::{}  >> /workingoutput/error.txt".format(file_present) ,shell=True )
     return 1
 def download_a_singlefile_with_URIString(url,filename,dir_to_save):
     xnatSession = XnatSession(username=XNAT_USER, password=XNAT_PASS, host=XNAT_HOST)

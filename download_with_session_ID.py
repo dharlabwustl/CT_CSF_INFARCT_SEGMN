@@ -703,7 +703,7 @@ def check_if_a_file_exist_in_snipr(URI, resource_dir,extension_to_find_list):
         for x in range(df_scan.shape[0]):
             print(df_scan.loc[x,'Name'])
             if extension_to_find in df_scan.loc[x,'Name']:
-                subprocess.call("echo " + "I FILENAME AT ::{}  >> /workingoutput/error.txt".format(df_scan.loc[x,'Name']) ,shell=True )
+                subprocess.call("echo " + "I FILENAME AT ::{}  >> /workingoutput/error.txt".format(df_scan.loc[x,'URI']) ,shell=True )
                 num_files_present=num_files_present+1
     return num_files_present
 def call_check_if_a_file_exist_in_snipr( args):

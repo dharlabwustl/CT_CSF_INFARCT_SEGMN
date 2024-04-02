@@ -1,5 +1,5 @@
 # ./bashtowriteDockerfile.sh
-parent_dir='/media/atul/WDJan2022/WASHU_WORKS/PROJECTS/DOCKERIZE/NWU/PYCHARM/CT_CSF_INFARCT_SEGMN/'
+parent_dir=${1} #'/media/atul/WDJan2022/WASHU_WORKS/PROJECTS/DOCKERIZE/NWU/PYCHARM/CT_CSF_INFARCT_SEGMN/'
 cat ${parent_dir}/Dockerfile_part1 > ${parent_dir}/Dockerfile
 echo "  "
 command=""

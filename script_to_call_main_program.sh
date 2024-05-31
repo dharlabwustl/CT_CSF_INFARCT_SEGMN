@@ -24,3 +24,12 @@ fi
 #then
 #    /software/dicom2nifti_call_sessionlevel_selected.sh  ${SESSION_ID} $XNAT_USER $XNAT_PASS $XNAT_HOST
 #fi
+####################################
+if [[ ${TYPE_OF_PROGRAM} == 'PROJECT_LEVEL_CSF_INFARCT_SEG' ]] ;
+then
+    /software/project_level_csf_infarct_seg.sh $SESSION_ID $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
+fi
+if [[ ${TYPE_OF_PROGRAM} == 'PROJECT_LEVEL_ICH_SEG' ]] ;
+then
+    /software/project_level_ich_seg.sh $SESSION_ID $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
+fi

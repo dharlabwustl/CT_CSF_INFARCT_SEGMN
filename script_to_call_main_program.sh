@@ -46,10 +46,10 @@ if [[ ${TYPE_OF_PROGRAM} == 'PROJECT_LEVEL' ]]; then
 echo "I AM HERE"
 if [[ ${SUBTYPE_OF_PROGRAM} == 'PROJECT_LEVEL_CSF_INFARCT_SEG' ]] ;
 then
-    /software/project_level_csf_infarct_seg.sh $SESSION_ID $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
+    /software/project_level_csf_infarct_seg.sh $SESSION_ID $XNAT_USER $XNAT_PASS "${ADDR[0]}"  "${ADDR[2]}" "${ADDR[3]}"
 fi
 if [[ ${SUBTYPE_OF_PROGRAM} == 'PROJECT_LEVEL_ICH_SEG' ]] ;
 then
-    /software/project_level_ich_seg.sh $SESSION_ID $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
+    /software/project_level_ich_seg.sh $SESSION_ID $XNAT_USER $XNAT_PASS "${ADDR[0]}"  "${ADDR[2]}" "${ADDR[3]}"
 fi
 fi

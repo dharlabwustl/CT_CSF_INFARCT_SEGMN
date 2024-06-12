@@ -38,10 +38,10 @@ rm  -r    ${output}/*
 # script_number=FILLREDCAPONLY ##DICOM2NIFTI #SCAN_SELECTION_FILL_RC #EDEMABIOMARKERS # 12 #SCAN_SELECTION_FILL_RC # EDEMABIOMARKERS #SCAN_SELECTION_FILL_RC #DICOM2NIFTI #SCAN_SELECTION_FILL_RC #REDCAP_FILL_SESSION_NAME #SCAN_SELECTION_FILL_RC #REDCAP_FILL_SESSION_NAME ##SCAN_SELECTION_FILL_RC #REDCAP_FILL_SESSION_NAME #SCAN_SELECTION_FILL_RC #12
 # snipr_host='https://snipr.wustl.edu' 
 # /callfromgithub/downloadcodefromgithub.sh $SESSION_ID $XNAT_USER $XNAT_PASS ${git_repo} ${script_number}  ${snipr_host}  EC6A2206FF8C1D87D4035E61C99290FF
-# }
+# } ?xsiType=xnat:ctSessionData&format=csv
 directory_to_create_destroy
 sessions_list=${software}/session.csv 
-curl -u $XNAT_USER:$XNAT_PASS -X GET $XNAT_HOST/data/projects/${project_ID}/experiments/?format=csv > ${sessions_list}
+curl -u $XNAT_USER:$XNAT_PASS -X GET $XNAT_HOST/data/projects/${project_ID}'/experiments/?xsiType=xnat:ctSessionData&format=csv' > ${sessions_list}
 ######################################
 count=0
   while IFS=',' read -ra array; do

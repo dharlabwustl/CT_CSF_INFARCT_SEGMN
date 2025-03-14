@@ -14,7 +14,7 @@ import argparse
 from xnatSession import XnatSession
 from redcapapi_functions import *
 catalogXmlRegex = re.compile(r'.*\.xml$')
-XNAT_HOST_URL='https://snipr.wustl.edu'
+XNAT_HOST_URL=os.environ['XNAT_HOST']  #'https://snipr02.nrg.wustl.edu:8080' #https://snipr02.nrg.wustl.edu' #'https://snipr.wustl.edu'
 XNAT_HOST = XNAT_HOST_URL # os.environ['XNAT_HOST']  #
 XNAT_USER = os.environ['XNAT_USER']#
 XNAT_PASS =os.environ['XNAT_PASS'] #
@@ -858,7 +858,7 @@ def fill_redcap_for_selected_scan(args):
         this_session_redcap_repeat_instance_df=df_scan_latest[df_scan_latest['snipr_session']==session_label]
         this_session_redcap_repeat_instance=str(this_session_redcap_repeat_instance_df['redcap_repeat_instance'].item())
         imaging_data_complete=str(this_session_redcap_repeat_instance_df['imaging_data_complete'].item())
-        if imaging_data_complete=='0':
+        if imaging_data_complete !='2':
             for each_colname in csv_file_df.columns:
                 subprocess.call("echo " + "I zai zeli AT ::{}  >> /workingoutput/error.txt".format(xmlfile) ,shell=True )
                 subprocess.call("echo " + "I zai zeli AT ::{}  >> /workingoutput/error.txt".format(args.stuff[2]) ,shell=True )

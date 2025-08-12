@@ -2,9 +2,9 @@
 
 #!/bin/bash
 
-# ---------------------------------------------
-# ct_csf_infarct_segmentation (docker workflow)
-# ---------------------------------------------
+# --------------------------------------------------------------------
+# ct_csf_infarct_segmentation_redcap (docker workflow) - API key hidden
+# --------------------------------------------------------------------
 
 # 1) Docker image
 imagename='registry.nrg.wustl.edu/docker/nrg-repo/sharmaatul11/ctegmentation:latest'
@@ -15,18 +15,19 @@ mkdir -p output input ZIPFILEDIR software NIFTIFILEDIR DICOMFILEDIR working work
 # 3) Clean previous run contents (CAUTION)
 rm -rf output/* input/* ZIPFILEDIR/* software/* NIFTIFILEDIR/* DICOMFILEDIR/* working/* workinginput/* workingoutput/* outputinsidedocker/*
 
-# 4) XNAT variables (edit these)
-SESSION_ID=REPLACE_WITH_SESSION_ID     # e.g., SNIPR_E03614
-PROJECT=REPLACE_WITH_PROJECT_NAME      # e.g., SNIPR01
+# 4) XNAT variables (edit these before running)
+SESSION_ID=REPLACE_WITH_SESSION_ID        # e.g., SNIPR_E03614
+PROJECT=REPLACE_WITH_PROJECT_NAME         # e.g., SNIPR01
 XNAT_USER=REPLACE_WITH_XNAT_USERNAME
 XNAT_PASS=REPLACE_WITH_XNAT_PASSWORD
 XNAT_HOST='https://snipr.wustl.edu'
+SCRIPT_NAME='CSF_INFARCT_SEGMENTATION'
+# API_KEY='REPLACE_WITH_REDCAP_API_KEY'   # Hidden for security
 
-# 5) Optional resource limits (reflects JSON reserve/limit memory)
-#    Uncomment if you want Docker to enforce memory constraints.
+# 5) Optional resource limits from JSON
 # DOCKER_MEM_FLAGS="--memory=16g --memory-reservation=8g"
 
-# 6) Run container (mounts mirror the JSON "mounts"; command mirrors "command-line")
+# 6) Run Docker container (mounts and command match JSON, API key omitted)
 docker run ${DOCKER_MEM_FLAGS} \
   -v "$PWD/output":/output \
   -v "$PWD/input":/input \
@@ -45,4 +46,5 @@ docker run ${DOCKER_MEM_FLAGS} \
     "${XNAT_PASS}" \
     "${XNAT_HOST}" \
     "https://github.com/dharlabwustl/CT_CSF_INFARCT_SEGMN.git" \
-    2
+    "${SCRIPT_NAME}" \
+    "${API_KEY}"   # Uncomment if API key is required

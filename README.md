@@ -3,7 +3,7 @@
 #!/bin/bash
 
 # --------------------------------------------------------------------
-# ct_csf_infarct_segmentation_redcap (docker workflow) - API key hidden
+# ct_csf_infarct_segmentation_redcap 
 # --------------------------------------------------------------------
 
 # 1) Docker image
@@ -51,7 +51,7 @@ docker run ${DOCKER_MEM_FLAGS} \
 
 ###################################################################################################################
 
-## Workflow: ct_ich_segmentation
+## ct_ich_segmentation
 
 **Docker Image:** `registry.nrg.wustl.edu/docker/nrg-repo/sharmaatul11/ctegmentation:latest`  
 **Script Number:** 3  

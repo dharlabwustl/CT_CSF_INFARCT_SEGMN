@@ -22,7 +22,7 @@ export XNAT_HOST=${XNAT_HOST}
     echo "'+' is not present in the string"
 fi
 echo ${TYPE_OF_PROGRAM}::TYPE_OF_PROGRAM
-if [[ ${TYPE_OF_PROGRAM} == "SEGMENT_LOCAL_COMPUTER" ]] ;
+if [[ ${TYPE_OF_PROGRAM} == 'SEGMENT_LOCAL_COMPUTER' ]] ;
 echo "I AM HERE"
 directory_name=$SESSION_ID
 echo $directory_name

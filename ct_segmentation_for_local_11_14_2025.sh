@@ -26,7 +26,7 @@ set -euo pipefail
 # Directory that already contains all the required preprocessed files
 # (equivalent to what used to be SNIPR resource PREPROCESS_SEGM)
 LOCAL_PREPROC_DIR="$1"
-
+echo ${LOCAL_PREPROC_DIR}
 # Internal directories (can be host-mounted in Docker)
 working_dir="${2:-/workinginput}"
 output_directory="${3:-/workingoutput}"

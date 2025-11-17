@@ -45,12 +45,12 @@ echo ">>> Final output directory    : $final_output_directory"
 # --------------------------------------------------------------------
 # Prepare directories
 # --------------------------------------------------------------------
-mkdir -p "$working_dir" "$output_directory" "$final_output_directory"
+#mkdir -p "$working_dir" "$output_directory" "$final_output_directory"
 
-# Optional: clean old contents (comment out if you want to keep them)
-rm -f "${working_dir}"/*        || true
-rm -f "${output_directory}"/*   || true
-rm -f "${final_output_directory}"/* || true
+## Optional: clean old contents (comment out if you want to keep them)
+#rm -f "${working_dir}"/*        || true
+#rm -f "${output_directory}"/*   || true
+#rm -f "${final_output_directory}"/* || true
 
 # Copy local preprocessed files into working_dir
 echo ">>> Copying preprocessed files into working_dir..."

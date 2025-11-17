@@ -18,10 +18,10 @@
 
 set -euo pipefail
 
-if [[ $# -lt 1 ]]; then
-  echo "Usage: $0 /path/to/local_PREPROCESS_SEGM_dir [/workinginput] [/workingoutput] [/outputinsidedocker]"
-  exit 1
-fi
+#if [[ $# -lt 1 ]]; then
+#  echo "Usage: $0 /path/to/local_PREPROCESS_SEGM_dir [/workinginput] [/workingoutput] [/outputinsidedocker]"
+#  exit 1
+#fi
 
 # Directory that already contains all the required preprocessed files
 # (equivalent to what used to be SNIPR resource PREPROCESS_SEGM)

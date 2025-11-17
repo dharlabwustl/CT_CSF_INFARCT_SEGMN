@@ -53,9 +53,10 @@ echo ">>> Final output directory    : $final_output_directory"
 #rm -f "${final_output_directory}"/* || true
 
 # Copy local preprocessed files into working_dir
-echo ">>> Copying preprocessed files into working_dir..."
-cp -r "${LOCAL_PREPROC_DIR}"/* "${working_dir}/"
-
+#echo ">>> Copying preprocessed files into working_dir..."
+#cp -r "${LOCAL_PREPROC_DIR}"/* "${working_dir}/"
+cp /input/SCANS/2/NIFTI/*.* "${working_dir}/"
+cp /input/SCANS/2/PREPROCESS_SEGM/*.* "${working_dir}/"
 # --------------------------------------------------------------------
 # Run the segmentation (ppredict.sh) on the local files
 # --------------------------------------------------------------------

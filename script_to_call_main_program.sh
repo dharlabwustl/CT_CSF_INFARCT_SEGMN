@@ -27,7 +27,7 @@ echo "I AM HERE"
 directory_name=$SESSION_ID
 echo $directory_name
 then
-    /software/ct_segmentation_for_local_11_14_2025.sh ${directory_name} $XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
+    /software/ct_segmentation_for_local_11_14_2025.sh ${directory_name}  #$XNAT_USER $XNAT_PASS $XNAT_HOST /input /output
 fi
 
 if [[ ${TYPE_OF_PROGRAM} == 2 ]] ;

@@ -333,6 +333,34 @@ def combinecsvs_general(inputdirectory,outputdirectory,outputfilename,extension)
     # combined_csv.dropna(subset=['FileName_slice'], inplace=True)
     # #export to csv
     # combined_csv.to_csv(outputfilepath, index=False, encoding='utf-8-sig')
+
+def downloadallfiletolocaldir():
+    print(sys.argv)
+    sessionId=str(sys.argv[1])
+    scanId=str(sys.argv[2])
+    resource_dirname=str(sys.argv[3])
+    output_dirname=str(sys.argv[4])
+
+    #xnatSession = XnatSession(username=XNAT_USER, password=XNAT_PASS, host=XNAT_HOST)
+    url = (("/data/experiments/%s/scans/%s/resources/" + resource_dirname+ "/files?format=zip")  %
+           (sessionId, scanId))
+
+    #xnatSession.renew_httpsession()
+    response = xnatSession.httpsess.get(xnatSession.host + url)
+    zipfilename=sessionId+scanId+'.zip'
+    with open(zipfilename, "wb") as f:
+        for chunk in response.iter_content(chunk_size=512):
+            if chunk:  # filter out keep-alive new chunks
+                f.write(chunk)
+    command='rm -r /ZIPFILEDIR/* '
+    subprocess.call(command,shell=True)
+    command = 'unzip -d /ZIPFILEDIR ' + zipfilename
+    subprocess.call(command,shell=True)
+    #xnatSession.close_httpsession()
+    copy_allfiles_to_a_dir(output_dirname)
+
+    return True
+
 def combinecsvs(inputdirectory,outputdirectory,outputfilename,extension):
     outputfilepath=os.path.join(outputdirectory,outputfilename)
     extension = 'csv'

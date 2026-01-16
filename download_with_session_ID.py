@@ -360,6 +360,16 @@ def downloadallfiletolocaldir():
     copy_allfiles_to_a_dir(output_dirname)
 
     return True
+def copy_allfiles_to_a_dir(dir_name):
+    for dirpath, dirnames, files in os.walk('/ZIPFILEDIR'):
+        #                print(f'Found directory: {dirpath}')
+        for file_name in files:
+            # file_extension = pathlib.Path(file_name).suffix
+            # if 'nii' in file_extension or 'gz' in file_extension:
+            command='cp ' + os.path.join(dirpath,file_name) + '  ' + dir_name + '/'
+            subprocess.call(command,shell=True)
+            print(os.path.join(dirpath,file_name))
+
 
 def combinecsvs(inputdirectory,outputdirectory,outputfilename,extension):
     outputfilepath=os.path.join(outputdirectory,outputfilename)

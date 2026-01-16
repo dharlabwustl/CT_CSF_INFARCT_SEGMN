@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53b945bd-6f95-49c9-8de1-4fb0e579eecd" name="Changes" comment="Commit day10">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/media/atul/WDJan2022/WASHU_WORKS/PROJECTS/DOCKERIZE/CT_CSF_INFARCT_SEGMN&quot;
+    &quot;last_opened_file_path&quot;: &quot;/media/atul/WDJan2022/WASHU_WORKS/PROJECTS/DOCKERIZE/deepregregis&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -416,7 +417,7 @@
       <option name="project" value="LOCAL" />
       <updated>1685741549126</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
